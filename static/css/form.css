@@ -1,0 +1,290 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+.main-title {
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+}
+.main-title::before,
+.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::before {
+    left: -30px;
+}
+.main-title::after {
+    right: -30px;
+}
+.main-title:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+/* End Global Rules */
+/* Start Header*/
+.header {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .header .logo {
+      width: 100%;
+      height: 50px;
+    }
+}
+/* End Header */
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.landing .content {
+    text-align: center;
+    padding: 0 20px;
+}
+.landing .content h2 {
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.landing .content form {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 35px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+.landing .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+}
+@media (max-width: 991px) {
+    .landing .form {
+        flex-basis: 100%;
+    }
+}
+.landing .form .input {
+    display: block;
+    width: 100%;
+    margin-right: 150px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    background-color: #F9F9F9;
+    caret-color: var(--main-color);
+}
+.landing .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+.landing .form .input:focus {
+    outline: none;
+}
+.landing .form [type="radio"] {
+    display: none;
+}
+.landing .form .gender {
+    display: flex;
+    cursor: pointer;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+.landing .form .gender span {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    border-radius: 31px;
+    transition: .25s ease;
+}
+.landing .form .gender span:hover,
+.landing .form [type="radio"]:checked + span
+{
+    background-color: #ddd;
+}
+.landing .form [type="radio"]:checked + span::before {
+    box-shadow: inset 0 0 0 6px var(--main-color-alt);
+}
+.landing .form .gender span::before {
+    content: "";
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: .25s ease;
+    box-shadow: inset 0 0 0 1.8px var(--main-color-alt);
+}
+.landing .form .goal-header {
+    display: flex;
+    padding-bottom: 19px;
+    padding-top: 8px;
+    color: #6d6d6d;
+}
+
+.landing .form [type="checkbox"] {
+    margin-left: 1px;
+    margin-bottom: 5px;
+    pointer-events: none;   
+    width: 20px; 
+}
+.landing .form .goal {
+    display: flex;
+    cursor: pointer;
+    font-weight: 350;
+    margin-bottom: 10px;
+}
+.landing .form .goal span {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 20px 8px 14px; 
+}
+.landing .form .clause {
+    display: flex;
+    cursor: pointer;
+    font-weight: 350;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+.landing .form .clause span {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 8px 3px 8px; 
+}
+.landing .form .clause input {
+    margin-top: 3px;
+}
+.landing .form [type="checkbox"]:checked {
+    accent-color: var(--main-color-alt);
+}
+.landing .form [type="checkbox"]:checked ~ span {
+    color: var(--main-color-alt);
+}
+
+.landing .form .button {
+    display: flex;
+    justify-content: center;
+}
+.landing .form a.back {
+    display: block;
+    width: 50%;
+    padding: 15px;
+    margin-right: 18px;
+    background-color: white;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.landing .form [type="submit"] {
+    display: block;
+    width: 50%;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.landing .form [type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+/* End Landing */

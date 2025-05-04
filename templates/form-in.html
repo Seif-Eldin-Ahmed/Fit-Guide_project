@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fit Guide/Plans & Programs</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="/static/css/all.css">
+        <!-- Import Font Awesome Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="/static/css/form.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+        <link rel="icon" href="/static/assets/logo.png">
+    </head>
+
+    <body>
+        <!-- Start Header -->
+        <div class="header" id="header">
+            <div class="container">
+                <a href="/templates/index-1.html" class="logo">Fit Guide</a>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Start Landing -->
+        <div class="landing">
+            <div class="form">
+                <div class="content">
+                    <form action="https://sheetdb.io/api/v1/yv6hcqbb3rnvm" method="POST" id="Pgform" onsubmit="func(event)">
+                        <h2>Fill The Form</h2>
+                        <input class="input" type="text" placeholder="Your Name" id="name" name="data[Name]" required />
+                        <input class="input" type="email" placeholder="Your Email" id="email" name="data[Email]" required />
+                        <input class="input" type="text" placeholder="Your Phone" id="phone" name="data[Phone]" required />
+                        <input class="input" type="text" placeholder="Your Country" id="country" name="data[Country]" />
+                        <label class="gender">
+                            <input type="radio" id="gender" name="data[Gender]" value="Male">
+                            <span>Male</span>
+                        </label>
+                        <label class="gender">
+                            <input type="radio" name="data[Gender]" value="Female">
+                            <span>Female</span>
+                        </label>
+                        <input class="input" type="text" placeholder="Your Age" id="age" name="data[Age]" required />
+                        <input class="input" type="text" placeholder="Your Weight" id="weight" name="data[Weight]" required />
+                        <input class="input" type="text" placeholder="Your Height" id="height" name="data[Height]" required />
+                        <input class="input" type="text" placeholder="Please mention any illnesses. If you have" id="illnesses" name="data[Illnesses]" />
+
+                        <label class="goal-header">▸ Please choose your goal :</label>
+                        <label class="goal">
+                            <input type="checkbox" id="c1" name="data[Goal 1]" value="Loss weight">
+                            <span>Loss weight</span>
+                        </label>
+                        <label class="goal">
+                            <input type="checkbox" id="c2" name="data[Goal 2]" value="Gain weight - Bulk">
+                            <span>Gain weight - Bulk</span>
+                        </label>
+                        <label class="goal">
+                            <input type="checkbox" id="c3" name="data[Goal 3]" value="Loss fat - Cutting">
+                            <span>Loss fat - Cutting</span>
+                        </label>
+                        <label class="goal">
+                            <input type="checkbox" id="c4" name="data[Goal 4]" value="Gain muscle">
+                            <span>Gain muscle</span>
+                        </label>
+                        <label class="goal">
+                            <input type="checkbox" id="c5" name="data[Goal 5]" value="Gain muscle and loss fat - Definition">
+                            <span>Gain muscle and loss fat - Definition</span>
+                        </label>
+                        <label class="goal">
+                            <input type="checkbox" id="c6" name="data[Goal 6]" value="Keep Fit and be healthy">
+                            <span>Keep Fit and be healthy</span>
+                        </label>
+
+                        <label class="clause">
+                            <input type="checkbox" required>
+                            <span>I consent to publish my data under the terms and conditions</span>
+                        </label>
+                        <div class="button">
+                            <a class="back" href="/templates/programs.html">Back</a>
+                            <button type="submit">Go</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+        </div>
+        <!-- End Landing -->
+        <script src="/static/js/script-form.js"></script>
+    </body>
+</html>

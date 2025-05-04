@@ -1,0 +1,247 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+.main-title {
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+}
+.main-title::before,
+.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::before {
+    left: -30px;
+}
+.main-title::after {
+    right: -30px;
+}
+.main-title:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+/* End Global Rules */
+/* Start Header*/
+.header {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .header .logo {
+      width: 100%;
+      height: 50px;
+    }
+}
+/* End Header*/
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.landing .container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+    color: white;
+    background-image: url(/static/assets/planding.jpg);
+    background-size: cover;
+    flex-basis: 100%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    animation: change-background 10s linear infinite;
+}
+.landing .container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #092a5fbb;
+    z-index: -1;
+}
+@media (max-width: 991px) {
+    .landing .container {
+        flex-basis: 100%;
+    }
+}
+.landing .content {
+    flex: 1;
+    text-align: left;
+    padding: 0 120px;
+}
+@media (max-width: 991px) {
+    .landing .content {
+      text-align: center;
+    }
+}
+.landing .content h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .landing .content h2 {
+      font-size: 24px;
+    }
+}
+.landing .content h2 span{
+    font-size: 40px;
+}
+.landing .content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 25px 0 0;
+    color: white;
+    max-width: 660px;
+}
+@media (max-width: 991px) {
+    .landing .content p {
+      margin: 10px auto;
+    }
+}
+  @media (max-width: 767px) {
+    .landing .content p {
+      font-size: 15px;
+    }
+}
+.landing .content span {
+    color: var(--main-color);
+    font-size: 42px;
+    font-weight: bold;
+}
+.landing .content h3 {
+    font-size: 25px;
+    color: white;
+    margin: 50px 0 20px;
+}
+.landing .content h3 span {
+    font-size: 28px;
+    background-color: var(--main-color-alt);
+    color: white;
+    padding: 0 5px;
+}
+.landing .content button {
+    font-size: 23px;
+    color: white;
+    max-width: 500px;
+    border: 3px solid var(--main-color);
+    border-radius: 8px;
+    background-color: var(--main-color);
+    padding: 8px 9px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+.landing .content button:hover {
+    border: 3px solid var(--main-color-alt);
+    background-color: var(--main-color-alt);
+    color: #fafafa;
+}
+.landing .content a button::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 600;
+    position:absolute;
+    margin-right: 10px;
+    margin-left: 95px;
+}
+@media (max-width: 767px) {
+    .landing .content button {
+      font-size: 19px;
+    }
+}
+/* End Landing */

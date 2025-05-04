@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fit Guide</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="/static/css/all.css">
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+        <link rel="icon" href="/static/assets/logo.png">
+    </head>
+
+    <body>
+        <!-- Start Header -->
+        <div class="header" id="header">
+            <div class="container">
+                <a href="/templates/index-1.html" class="logo">Fit Guide</a>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Start Landing -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h2>Food Section</h2>
+                    <h1>View the <span>Nutritional values</span> and <span>calories</span> in fruits in an <span>advanced</span> and more accurate way   
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- End Landing -->
+        <!-- Start Classify -->
+        <div class="classify" id="classify">
+            <h2 class="main-title">Food Classification</h2>
+            <div class="container">
+                <div class="text">
+                    <h2>Choose a fruit image to classify and analyze.
+                    </h2>
+                </div>
+                <div class="image">
+                    <img src="/static/assets/home-food.png" alt="">
+                </div>
+                
+                <form id ="upload-form">
+                    <div id ="upload-btn-wrapper">
+                        <input type="file" name="file" id="file-input" accept="image/*" required>
+                        <label for="file-input">Choose a file</label>
+                    </div>
+                    <button type="submit">Classify</button>
+                </form>
+                <div id="result-container">
+                    <div id="result">
+                        <label>result is</label>
+                    </div>
+                    <div id="template">
+                        <label>
+                            <div id="header1"></div>
+                            <div id="sep1"></div>
+                            <div id="p1"></div>
+                            <div id="header2"></div>
+                            <div id="sep2"></div>
+                            <div id="p2"></div>
+                            <div id="p2sub"></div>
+                            <div id="p3"></div>
+                            <div id="p3sub"></div>
+                            <div id="p4"></div>
+                            <div id="sep3"></div>
+                            <div id="p5"></div>    
+                        </label>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- End Classify -->
+        <script src="/static/js/script.js"></script>
+    </body>
+</html>
+        
+        

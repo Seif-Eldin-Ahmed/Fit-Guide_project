@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fit Guide</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="/static/css/all.css">
+        <!-- Import Font Awesome Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="/static/css/main-page.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+        <link rel="icon" href="/static/assets/logo.png">
+    </head>
+
+    <body>
+        <!-- Start Header -->
+        <div class="header" id="header">
+            <div class="container">
+                <a href="#" class="logo">Fit Guide</a>
+                <ul class="main-nav">
+                    <li><a href="#programs">Plans & Programs</a></li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#tips">Tips</a></li>
+                    <li><a href="#ask">Ask Me</a></li>
+                    <li><a href="#footer">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Start Landing -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h1>Welcome, To <span>Fit Guide</span> App<br>
+                        Your guide to your new <span>healthy life</span>
+                    </h1>
+                    <p>All about fitness, physical health and healthy living</p>
+                    <a href="#programs"><button>Start Your Journey</button></a>
+                </div>
+                <div class="image">
+                    <img src="/static/assets/home-land.png" alt="">
+                    <img class="imgd1" src="/static/assets/home-land.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- End Landing -->
+        <!-- Start Programs -->
+         <div class="programs" id="programs">
+            <h2 class="main-title">Plans & Programs</h2>
+            <div class="container">
+                <div class="text">
+                    <h1><span>#</span>1</h1>
+                    <h2>Comprehensive plans and programs<br>for all goals</h2>
+                    <p>A Programs include exercises, Food, Organization of the hours of the day</p>
+                    <a href="/templates/programs.html"><button>Be Fit Now</button></a>
+                </div>
+                <div class="image">
+                    <img src="/static/assets/home-programs.png" alt="">  
+                </div>
+            </div>
+         </div>
+        <!-- End Programs -->
+        <!-- Start Food -->
+         <div class="food" id="food">
+            <h2 class="main-title">Food</h2>
+            <div class="container">
+                <div class="image">
+                    <img src="/static/assets/food.png" alt="">  
+                </div>
+                <div class="text">
+                    <h1><span>#</span>2</h1>
+                    <h2>Food and what you need</h2>
+                    <p>The contents of the food, its benefits, calories and its importance for each goal</p>
+                    <a href="/templates/index.html"><button>Discover Now</button></a>
+                </div>
+            </div>
+         </div>
+        <!-- End Food -->
+        <!-- Start Tips -->
+         <div class="tips" id="tips">
+            <h2 class="main-title">Tips</h2>
+            <div class="container">
+                <div class="text">
+                    <h1><span>#</span>3</h1>
+                    <h2>Become more knowledgeable and closer to<br>achieving your goal</h2>
+                    <p>Important tips and information to help you achieve your goal and make you more knowledgeable</p>
+                    <a href="/templates/tips.html"><button>Know More</button></a>
+                </div>
+                <div class="image">
+                    <img src="/static/assets/home-tips.png" alt="">  
+                </div>
+            </div>
+         </div>
+        <!-- End Tips -->
+        <!-- Start Ask Me -->
+         <div class="ask" id="ask">
+            <div class="image">
+                <div class="content">
+                    <h1><span>#</span>4</h1>
+                    <h2>Do You Need Help?</h2>
+                    <p>
+                        Whatever you need or want to ask or inquire about anything,
+                        this section is specially there for you so that the best coaches can
+                        respond to you anytime you want.
+                    </p>
+                    <img src="/static/assets/home-ask.png" alt="">
+                </div>
+            </div>
+            <div class="form">
+                <div class="content">
+                    <h2>Ask Me</h2>
+                    <form method="POST" action="/send_whatsapp" target="_blank">
+                      <input class="input" type="text" placeholder="Your Name" id="name" name="Name" />
+                      <input class="input" type="email" placeholder="Your Email" id="email" name="Email" />
+                      <input class="input" type="text" placeholder="Your Phone" id="phone" name="Phone" />
+                      <textarea class="input" placeholder="Tell Us About Your Needs" id="message" name="Message" ></textarea>
+                      <button type="submit" value="Send">Send</button>
+                  </form>
+                </div>
+            </div>
+         </div>
+        <!-- End Ask Me -->
+        <!-- Start Footer -->
+         <div class="footer" id="footer">
+            <div class="container">
+              <div class="box">
+                <h3>Fit Guide</h3>
+                <ul class="social">
+                  <li>
+                    <a href="#" class="facebook">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="twitter">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="youtube">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="text">
+                  This site is built for one goal, which is to make fitness and healthy life
+                  easy for all people for all goals
+                  and aims to achieve this for free.
+                </p>
+              </div>
+              <div class="box">
+                <h2 class="main-links">Quick Access</h2>
+                <ul class="links">
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="/templates/programs.html">Plans & Programs</a></li>
+                  <li><a href="/templates/index.html">Food</a></li>
+                </ul>
+              </div>
+              <div class="box">
+                <ul class="links">
+                  <li><a href="/templates/tips.html">Tips & Information</a></li>
+                  <li><a href="#ask">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="line">
+                  <i class="fas fa-map-marker-alt fa-fw"></i>
+                  <div class="info">Built In: Egypt, Suez</div>
+                </div>
+                <div class="line">
+                  <i class="far fa-clock fa-fw"></i>
+                  <div class="info">This work started on the 27th of February 2025</div>
+                </div>
+              </div>
+            </div>
+            <p class="copyright"><span>Fit Guide</span> Copyright ©2025 Seif Eldin Amaty. All rights reserved.</p>
+         </div>
+        <!-- End Footer -->
+        <script src="/static/js/script.js"></script>
+    </body>
+</html>

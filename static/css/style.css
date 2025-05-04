@@ -1,0 +1,412 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+.main-title {
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+}
+.main-title::before,
+.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-title::before {
+    left: -30px;
+}
+.main-title::after {
+    right: -30px;
+}
+.main-title:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+/* End Global Rules */
+/* Start Header*/
+.header {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .header .logo {
+      width: 100%;
+      height: 50px;
+    }
+}
+/* End Header*/
+/* Start Landing */
+.landing {
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 98%;
+    background-color: #ECECEC;
+    z-index: -1;
+    transform: sKewY(-6deg);
+    transform-origin: top left;
+}
+.landing .container {
+    min-height: calc(84.5vh - 92px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.landing .text {
+    flex: 1;
+}
+@media (max-width: 991px) {
+    .landing .text {
+      text-align: center;
+    }
+}
+.landing .text h2 {
+    color: var(--main-color);
+    font-size: 44px;
+    letter-spacing: -2px;
+    text-align: center;
+    justify-content: center;
+    margin-top: -60px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+}
+@media (max-width: 767px) {
+    .landing .text h2 {
+      font-size: 24px;
+    }
+}
+.landing .text h1 {
+    padding-top: 30px;
+    font-size: 37px;
+    line-height: 1.7;
+    text-align: center;
+    justify-content: center;
+}
+@media (max-width: 767px) {
+    .landing .text h1 {
+      font-size: 28px;
+    }
+}
+.landing .text span {
+    background-color: var(--main-color-alt);
+    color: white;
+    padding: 0 5px;
+}
+.landing .text p {
+    font-size: 23px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+@media (max-width: 991px) {
+    .landing .text p {
+      margin: 10px auto;
+    }
+}
+  @media (max-width: 767px) {
+    .landing .text p {
+      font-size: 17px;
+    }
+}
+.landing .text button {
+    font-size: 23px;
+    font-weight: 550;
+    background-color: white;
+    color: var(--main-color);
+    max-width: 500px;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 10px;
+    padding-right: 40px;
+    margin: 10px 0px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+.landing .text button:hover {
+    background-color: var(--main-color-alt);
+    color: #fafafa;
+}
+.landing .text a button::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 600;
+    position:absolute;
+    margin-right: 10px;
+    margin-left: 185px;
+}
+@media (max-width: 767px) {
+    .landing .text button {
+      font-size: 19px;
+    }
+}
+/* End Landing */
+/* Start Classify*/
+.classify {
+    position: relative;
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.classify .container {
+    display: block;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.classify .text {
+    position: relative;
+    flex: 1;
+}
+@media (max-width: 991px) {
+    .classify .text {
+      text-align: center;
+    }
+}
+.classify .text h2 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1.7;
+}
+@media (max-width: 767px) {
+    .classify .text h2 {
+      font-size: 24px;
+    }
+}
+.classify .image img {
+    position: absolute;
+    right: 30px;
+    top: 200px;
+    width: 460px;
+    height: 450px;
+    filter: drop-shadow(3px 5px 5px #555);
+}
+@media (max-width: 991px) {
+    .classify .image {
+      display: none;
+    }
+}
+#upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#file-input {
+    display: none;
+}
+
+#upload-btn-wrapper {
+    display: relative;
+    overflow: hidden;
+}
+#upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+#upload-btn-wrapper label {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 550;
+    color: #fff;
+    max-width: 500px;
+    border: 3px solid var(--main-color);
+    border-radius: 8px;
+    background-color: var(--main-color);
+    padding: 8px 9px;
+    margin: 10px 8px;
+    cursor: pointer;
+}
+#upload-btn-wrapper label:hover {
+    border: 3px solid var(--main-color-alt);
+    background-color: var(--main-color-alt);
+    color: #fafafa;
+}
+button {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 550;
+    color: var(--main-color);
+    max-width: 500px;
+    border: 3px solid var(--main-color);
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px 9px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+button:hover {
+    border: 3px solid var(--main-color-alt);
+    background-color: var(--main-color-alt);
+    color: #fafafa;
+}
+#result-container {
+    min-height: calc(70vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#result {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 37%;
+    left: 50%;
+    background-color: var(--main-color-alt);
+    transform: translateX(-48%);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 60px;
+    border: none;
+    border-radius: 8px;
+}
+#template {
+    display: block;
+    position: absolute;
+    background-color: #ECECEC;
+    padding: 25px 94px;
+    top: 42.4%;
+    transform: translateX(2%);
+    font-size: 20px;
+    border-radius: 8px;
+}
+#header1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+#header2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+#p1,#p2,#p3,#p4 {
+    font-weight: 630;
+    line-height: 1.3;
+}
+#p2sub,#p3sub,#p5 {
+    font-weight: 300;
+    line-height: 1.3;
+    padding-bottom: 10px;
+}
+/* End Classify*/
+/* Start Animation */
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* End Animation */
